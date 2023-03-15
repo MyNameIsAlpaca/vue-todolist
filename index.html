@@ -17,7 +17,7 @@
                    <span @click="todos[index].done == false ? todos[index].done = true  :  todos[index].done = false " :style="[todos[index].done ? { textDecoration: 'line-through' } : '']">{{todos[index].task}}</span> - <span @click="deleteTask(index)" style="color:red">X</span>
                 </li>
             </ul>
-            <input type="text" placeholder="Inserisci nuova task" v-model="taskValue">
+            <input type="text" placeholder="Inserisci nuova task" v-model="taskValue" @keyup.enter="addTask">
             <button @click="addTask">Aggiungi</button>
         </div>
     </div>
