@@ -14,7 +14,7 @@
             <h1>Cose da fare</h1>
             <ul>
                 <li v-for="(todo, index) in todos">
-                    {{todos[index].task}} - <span style="color:red">X</span>
+                   <span @click="todos[index].done == false ? todos[index].done = true  :  todos[index].done = false " :style="[todos[index].done ? { textDecoration: 'line-through' } : '']">{{todos[index].task}}</span> - <span style="color:red">X</span>
                 </li>
             </ul>
             <input type="text" placeholder="Inserisci nuova task" v-model="taskValue">

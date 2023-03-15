@@ -27,6 +27,6 @@ createApp({
         this.todos.push(this.newTask);
         
         this.taskValue = '';
-    }
+    },
   },
 }).mount('#app')
