@@ -22,14 +22,19 @@ body {
     font-size: 50px;
 }
 
+.tablet {
+    background-image: url(../img/background.jpg);
+}
+
 .container ul {
     display: flex;
     flex-flow: column;
-    gap: 10px;
+    gap: 20px;
     max-height: 450px;
     overflow: hidden auto;
     max-width: 400px;
-    word-wrap: break-word
+    word-wrap: break-word;
+    
 }
 
 .container li {
