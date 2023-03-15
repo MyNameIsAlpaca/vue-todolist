@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Todolist</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
-        <div class="container">
-            <h1>Cose da fare</h1>
-            <ul>
-                <li v-for="(todo, index) in todos">
-                   <span @click="todos[index].done == false ? todos[index].done = true  :  todos[index].done = false " :style="[todos[index].done ? { textDecoration: 'line-through' } : '']">{{todos[index].task}}</span> - <span @click="deleteTask(index)" style="color:red">X</span>
-                </li>
-            </ul>
-            <input type="text" placeholder="Inserisci nuova task" v-model="taskValue" @keyup.enter="addTask">
-            <button @click="addTask">Aggiungi</button>
+        <div class="tablet">
+            <div class="content">
+                <div class="container">
+                    <h1>Cose da fare</h1>
+                    <ul>
+                        <li v-for="(todo, index) in todos">
+                           <span @click="todos[index].done == false ? todos[index].done = true  :  todos[index].done = false " :style="[todos[index].done ? { textDecoration: 'line-through' } : '']"><i class="fa-regular fa-hand-point-right"></i> {{todos[index].task}}</span> - <span @click="deleteTask(index)" style="color:red">X</span>
+                        </li>
+                    </ul>
+                    <input type="text" placeholder="Inserisci nuova task" v-model="taskValue" @keyup.enter="addTask">
+                    <button @click="addTask">Aggiungi</button>
+                </div>
+            </div>
         </div>
     </div>
 
