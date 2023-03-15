@@ -5,11 +5,11 @@ createApp({
     return {
       todos: [
         {
-            task: "portare fuori il cane",
+            task: "Portare fuori il cane",
             done: false,
         },
         {
-            task: "scrivere un libro",
+            task: "Scrivere un libro",
             done: false,
         },
       ],
