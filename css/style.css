@@ -30,6 +30,7 @@ body {
 
 .container li {
     font-size: 20px;
+    user-select: none;
 }
 
 .container ul li span {
@@ -47,4 +48,5 @@ body {
     font-size: 20px;
     background-color: brown;
     color: white;
+    cursor: pointer;
 }

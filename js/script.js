@@ -18,15 +18,21 @@ createApp({
   },
   methods: {
     addTask() {
-        
-        this.newTask = {
-            task: this.taskValue,
-            done: false,
-        };
 
-        this.todos.push(this.newTask);
+        if (this.taskValue == '') {
+            alert("Inserisci una task da compiere!");
+        } else {
+            
+            this.newTask = {
+                task: this.taskValue,
+                done: false,
+            };
+    
+            this.todos.push(this.newTask);
+            
+            this.taskValue = '';
+        }
         
-        this.taskValue = '';
     },
     deleteTask(index) {
 
