@@ -28,5 +28,11 @@ createApp({
         
         this.taskValue = '';
     },
+    deleteTask(index) {
+
+        // elimina l'elemento dall'array all'indice che ti do io
+        this.todos.splice(index, 1);
+  
+      },
   },
 }).mount('#app')
